@@ -1,5 +1,5 @@
 services:
-  claude2openai:
+  freegpt35:
     image: missuo/freegpt35:latest
     restart: always
     ports:
