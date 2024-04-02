@@ -1,0 +1,6 @@
+services:
+  claude2openai:
+    image: missuo/freegpt35:latest
+    restart: always
+    ports:
+      - "3040:3040"
