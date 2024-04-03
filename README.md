@@ -7,6 +7,12 @@ Utilize the unlimited free **GPT-3.5-Turbo** API service provided by the login-f
 > [!IMPORTANT]  
 > **If you are unable to use this project normally, it is most likely due to issues with your IP. Your IP has triggered Cloudflare's shield, or has already been banned. Please try to change your IP or switch servers on your own. 如果您无法正常使用此项目，很可能是由于您的 IP 存在问题。您的 IP 已触发了 Cloudflare 的盾，或已被 ban 掉。请尝试自行更改您的 IP 或切换服务器。**
 
+## Please READ the following content carefully!
+- Please do not use the IP provided by proxy providers, otherwise you probably won't be able to use it. 请不要使用机场的 IP，不然你大概率无法使用。
+- Do not make frequent requests, such as using **immersive translate**. 不要频繁请求，例如使用沉浸式翻译。
+- Recommended to use US home broadband IP, you are very likely to succeed. 推荐使用美国家宽IP，你很大可能可以成功。
+- Don't share and abuse your API. 不要共享和滥用你的 API。
+
 ## Deploy
 ### Node
 
@@ -55,8 +61,6 @@ curl http://127.0.0.1:3040/v1/chat/completions \
 ## Compatibility
 
 You can use it in any app, such as OpenCat, Next-Chat, Lobe-Chat, Bob, etc. Feel free to fill in an **API Key** with any string, for example, `gptyyds`.
-
-It's best not to use **immersive translate**, otherwise your server IP may be suspected of suspicious activity and quickly blocked.
 
 ### Bob
 ![Bob](./img/bob.png)
