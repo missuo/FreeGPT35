@@ -117,6 +117,7 @@ function enableCORS(req, res, next) {
 // Middleware to handle chat completions
 async function handleChatCompletion(req, res) {
   if (req.headers.authorization !== process.env.MY_FREE_GPT_AUTHORIZATION) {
+    console.log("req.headers.authorization:", req.headers.authorization, " != env.MY_FREE_GPT_AUTHORIZATION:", process.env.MY_FREE_GPT_AUTHORIZATION);
     return res.status(401).send({
       status: false,
       error: {
@@ -288,7 +289,7 @@ app.use((req, res) =>
 );
 
 // Start the server and the session ID refresh loop
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
   console.log(`💡 Server is running at http://localhost:${port}`);
   console.log();
   console.log(`🔗 Base URL: http://localhost:${port}/v1`);
