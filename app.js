@@ -93,8 +93,7 @@ async function getNewSessionId() {
     }
   );
   console.log(
-    `System: Successfully refreshed session ID and token. ${
-      !token ? "(Now it's ready to process requests)" : ""
+    `System: Successfully refreshed session ID and token. ${!token ? "(Now it's ready to process requests)" : ""
     }`
   );
   oaiDeviceId = newDeviceId;
@@ -117,6 +116,15 @@ function enableCORS(req, res, next) {
 
 // Middleware to handle chat completions
 async function handleChatCompletion(req, res) {
+  if (req.headers.authorization !== process.env.MY_FREE_GPT_AUTHORIZATION) {
+    return res.status(401).send({
+      status: false,
+      error: {
+        message: `Invalid Authorization Token.`,
+        type: "invalid_request_error",
+      },
+    });
+  }
   console.log(
     "Request:",
     `${req.method} ${req.originalUrl}`,
