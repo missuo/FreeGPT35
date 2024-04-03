@@ -53,7 +53,7 @@ You can use it in any app, such as OpenCat, Next-Chat, Lobe-Chat, Bob, etc. Feel
 It's best not to use **immersive translate**, otherwise your server IP may be suspected of suspicious activity and quickly blocked.
 
 ### Bob
-![Bob](./img/Bob.png)
+![Bob](./img/bob.png)
 
 ## License
 MIT License
