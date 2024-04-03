@@ -2,7 +2,8 @@
 
 [1]: https://img.shields.io/docker/pulls/missuo/freegpt35?logo=docker
 
-Utilize the unlimited free **GPT-3.5-Turbo** API service provided by the login-free ChatGPT Web. Forked from [https://github.com/skzhengkai/free-chatgpt-api](https://github.com/skzhengkai/free-chatgpt-api).
+Utilize the unlimited free **GPT-3.5-Turbo** API service provided by the login-free ChatGPT Web.
+
 
 > [!IMPORTANT]  
 > **If you are unable to use this project normally, it is most likely due to issues with your IP. Your IP has triggered Cloudflare's shield, or has already been banned. Please try to change your IP or switch servers on your own. 如果您无法正常使用此项目，很可能是由于您的 IP 存在问题。您的 IP 已触发了 Cloudflare 的盾，或已被 ban 掉。请尝试自行更改您的 IP 或切换服务器。**
@@ -64,6 +65,10 @@ You can use it in any app, such as OpenCat, Next-Chat, Lobe-Chat, Bob, etc. Feel
 
 ### Bob
 ![Bob](./img/bob.png)
+
+## Credits
+- Forked From: [https://github.com/skzhengkai/free-chatgpt-api](https://github.com/skzhengkai/free-chatgpt-api)
+- Original author: [https://github.com/PawanOsman/ChatGPT](https://github.com/PawanOsman/ChatGPT)
 
 ## License
 MIT License
