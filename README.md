@@ -1,4 +1,6 @@
-# FreeGPT35
+[![Docker Pulls][1]](https://hub.docker.com/r/missuo/freegpt35)
+[1]: https://img.shields.io/docker/pulls/missuo/freegpt35?logo=docker
+
 Utilize the unlimited free **GPT-3.5-Turbo** API service provided by the login-free ChatGPT Web. Forked from [https://github.com/skzhengkai/free-chatgpt-api](https://github.com/skzhengkai/free-chatgpt-api).
 
 ## Deploy
