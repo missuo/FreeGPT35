@@ -2,8 +2,10 @@
 
 [1]: https://img.shields.io/docker/pulls/missuo/freegpt35?logo=docker
 
-
 Utilize the unlimited free **GPT-3.5-Turbo** API service provided by the login-free ChatGPT Web. Forked from [https://github.com/skzhengkai/free-chatgpt-api](https://github.com/skzhengkai/free-chatgpt-api).
+
+> [!NOTICE]  
+> **If you are unable to use this project normally, it is most likely due to issues with your IP. Your IP has triggered Cloudflare's shield, or has already been banned. Please try to change your IP or switch servers on your own.**
 
 ## Deploy
 ### Node
