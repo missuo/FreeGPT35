@@ -68,7 +68,7 @@ You can use it in any app, such as OpenCat, Next-Chat, Lobe-Chat, Bob, etc. Feel
 
 ## Credits
 - Forked From: [https://github.com/skzhengkai/free-chatgpt-api](https://github.com/skzhengkai/free-chatgpt-api)
-- Original author: [https://github.com/PawanOsman/ChatGPT](https://github.com/PawanOsman/ChatGPT)
+- Original Author: [https://github.com/PawanOsman/ChatGPT](https://github.com/PawanOsman/ChatGPT)
 
 ## License
 MIT License
