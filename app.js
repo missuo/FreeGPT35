@@ -116,7 +116,7 @@ function enableCORS(req, res, next) {
 
 // Middleware to handle chat completions
 async function handleChatCompletion(req, res) {
-  if (req.headers.authorization !== "Bearer " + process.env.MY_FREE_GPT_AUTHORIZATION) {
+  if (process.env.MY_FREE_GPT_AUTHORIZATION != '' && req.headers.authorization !== "Bearer " + process.env.MY_FREE_GPT_AUTHORIZATION) {
     console.log("req.headers.authorization:", req.headers.authorization, " != env.MY_FREE_GPT_AUTHORIZATION:", process.env.MY_FREE_GPT_AUTHORIZATION);
     return res.status(401).send({
       status: false,
