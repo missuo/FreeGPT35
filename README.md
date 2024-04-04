@@ -39,7 +39,7 @@ wget -O compose.yaml https://raw.githubusercontent.com/missuo/FreeGPT35/main/com
 docker compose up -d
 ```
 
-Compose with [Next-Chat](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web):
+Compose with [ChatGPT-Next-Web](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web):
 
 ```bash
 mkdir freegpt35 && cd freegpt35
