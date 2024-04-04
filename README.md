@@ -39,6 +39,14 @@ wget -O compose.yaml https://raw.githubusercontent.com/missuo/FreeGPT35/main/com
 docker compose up -d
 ```
 
+Compose with [Next-Chat](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web):
+
+```bash
+mkdir freegpt35 && cd freegpt35
+wget -O compose.yaml https://raw.githubusercontent.com/missuo/FreeGPT35/main/compose_with_next_chat.yaml
+docker compose up -d
+```
+
 ## Request Example
 
 **You don't have to pass Authorization, of course, you can also pass any string randomly.**
