@@ -33,19 +33,23 @@ docker run -p 3040:3040 missuo/freegpt35
 
 ### Docker Compose
 
+#### Only FreeGPT35 Service
+
 ```bash
 mkdir freegpt35 && cd freegpt35
 wget -O compose.yaml https://raw.githubusercontent.com/missuo/FreeGPT35/main/compose.yaml
 docker compose up -d
 ```
 
-Compose with [ChatGPT-Next-Web](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web):
+#### FreeGPT35 Service with [ChatGPT-Next-Web](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web):
 
 ```bash
 mkdir freegpt35 && cd freegpt35
 wget -O compose.yaml https://raw.githubusercontent.com/missuo/FreeGPT35/main/compose_with_next_chat.yaml
 docker compose up -d
 ```
+
+After deployment, you can directly access `http://[IP]:3040/v1/chat/completions` to use the API. Or use `http://[IP]:3000` to directly use ChatGPT-Next-Web.
 
 ## Request Example
 
