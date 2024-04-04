@@ -49,6 +49,55 @@ wget -O compose.yaml https://raw.githubusercontent.com/missuo/FreeGPT35/main/com
 docker compose up -d
 ```
 
+### Nginx Reverse Proxy
+
+```nginx
+location ^~ / {
+        proxy_pass http://127.0.0.1:3040; 
+        proxy_set_header Host $host; 
+        proxy_set_header X-Real-IP $remote_addr; 
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; 
+        proxy_set_header REMOTE-HOST $remote_addr; 
+        proxy_set_header Upgrade $http_upgrade; 
+        proxy_set_header Connection "upgrade"; 
+        proxy_http_version 1.1; 
+        add_header Cache-Control no-cache; 
+        proxy_cache off;
+        proxy_buffering off;
+        chunked_transfer_encoding on;
+        tcp_nopush on;
+        tcp_nodelay on;
+        keepalive_timeout 300;
+    }
+```
+
+### Nginx Reverse Proxy with Load Balancer
+
+```nginx
+upstream freegpt35 {
+        server 1.1.1.1:3040;
+        server 2.2.2.2:3040;
+}
+
+location ^~ / {
+        proxy_pass http://freegpt35; 
+        proxy_set_header Host $host; 
+        proxy_set_header X-Real-IP $remote_addr; 
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; 
+        proxy_set_header REMOTE-HOST $remote_addr; 
+        proxy_set_header Upgrade $http_upgrade; 
+        proxy_set_header Connection "upgrade"; 
+        proxy_http_version 1.1; 
+        add_header Cache-Control no-cache; 
+        proxy_cache off;
+        proxy_buffering off;
+        chunked_transfer_encoding on;
+        tcp_nopush on;
+        tcp_nodelay on;
+        keepalive_timeout 300;
+    }
+```
+
 After deployment, you can directly access `http://[IP]:3040/v1/chat/completions` to use the API. Or use `http://[IP]:3000` to directly use **ChatGPT-Next-Web**.
 
 ## Request Example
