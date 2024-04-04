@@ -49,7 +49,7 @@ wget -O compose.yaml https://raw.githubusercontent.com/missuo/FreeGPT35/main/com
 docker compose up -d
 ```
 
-After deployment, you can directly access `http://[IP]:3040/v1/chat/completions` to use the API. Or use `http://[IP]:3000` to directly use ChatGPT-Next-Web.
+After deployment, you can directly access `http://[IP]:3040/v1/chat/completions` to use the API. Or use `http://[IP]:3000` to directly use **ChatGPT-Next-Web**.
 
 ## Request Example
 
