@@ -11,6 +11,13 @@ const apiUrl = `${baseUrl}/backend-api/conversation`;
 const refreshInterval = 60000; // Interval to refresh token in ms
 const errorWait = 120000; // Wait time in ms after an error
 
+// Import the SocksProxyAgent module and configure the proxy settings
+const SocksProxyAgent = require('socks-proxy-agent');
+const { exit } = require("process");
+const proxyHost = "127.0.0.1", proxyPort = "9091";
+const proxyOptions = `socks5h://${proxyHost}:${proxyPort}`;
+const httpsAgent = new SocksProxyAgent.SocksProxyAgent(proxyOptions);
+
 // Initialize global variables to store the session token and device ID
 let token;
 let oaiDeviceId;
@@ -60,7 +67,7 @@ async function* StreamCompletion(data) {
 
 // Setup axios instance for API requests with predefined configurations
 const axiosInstance = axios.create({
-  httpsAgent: new https.Agent({ rejectUnauthorized: false }),
+  httpsAgent: httpsAgent,
   headers: {
     accept: "*/*",
     "accept-language": "en-US,en;q=0.9",
@@ -298,6 +305,11 @@ app.listen(port, () => {
         await getNewSessionId();
         await wait(refreshInterval);
       } catch (error) {
+        // if "challenge-form" in error.response.data
+        if (error.response?.data?.includes("challenge-form")) {
+          console.error("Blocked by Cloudflare Turnstile. Server will now exit.");
+          exit();
+        }
         console.error("Error refreshing session ID, retrying in 1 minute...");
         console.error(
           "If this error persists, your country may not be supported yet."
