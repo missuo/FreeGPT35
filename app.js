@@ -161,6 +161,9 @@ async function handleChatCompletion(req, res) {
     let created = Date.now();
 
     for await (const message of StreamCompletion(response.data)) {
+      // Skip heartbeat detection
+			if (message.match(/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{6}$/)) continue;
+			
       const parsed = JSON.parse(message);
 
       let content = parsed?.message?.content?.parts[0] || "";
