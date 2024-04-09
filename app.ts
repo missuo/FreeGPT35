@@ -280,18 +280,20 @@ app.listen(port, () => {
 	console.log("🌍 GitHub Repository: https://github.com/PawanOsman/ChatGPT");
 	console.log(`Don't forget to ⭐ star the repository if you like this project!`);
 	console.log();
-
-	setTimeout(async () => {
-		while (true) {
-			try {
-				await getNewSessionId();
-				await wait(refreshInterval);
-			} catch (error) {
-				console.error("Error refreshing session ID, retrying in 1 minute...");
-				console.error("If this error persists, your country may not be supported yet.");
-				console.error("If your country was the issue, please consider using a U.S. VPN.");
-				await wait(errorWait);
+	if (process.env.NODE_ENV === 'production'){
+		setTimeout(async () => {
+			while (true) {
+				try {
+					await getNewSessionId();
+					await wait(refreshInterval);
+				} catch (error) {
+					console.error("Error refreshing session ID, retrying in 1 minute...");
+					console.error("If this error persists, your country may not be supported yet.");
+					console.error("If your country was the issue, please consider using a U.S. VPN.");
+					await wait(errorWait);
+				}
 			}
-		}
-	}, 0);
+		}, 0);
+	}
+	
 });
