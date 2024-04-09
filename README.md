@@ -132,4 +132,4 @@ You can use it in any app, such as OpenCat, Next-Chat, Lobe-Chat, Bob, etc. Feel
 - Original Author: [https://github.com/PawanOsman/ChatGPT](https://github.com/PawanOsman/ChatGPT)
 
 ## License
-MIT License
+AGPL 3.0 License
