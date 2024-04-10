@@ -51,7 +51,7 @@ docker compose up -d
 
 After deployment, you can directly access `http://[IP]:3040/v1/chat/completions` to use the API. Or use `http://[IP]:3000` to directly use **ChatGPT-Next-Web**.
 
-#### FreeGPT35 Service with [lobe-chat](https://github.com/lobehub/lobe-chat)):
+#### FreeGPT35 Service with [lobe-chat](https://github.com/lobehub/lobe-chat):
 
 ```bash
 mkdir freegpt35 && cd freegpt35
