@@ -1,0 +1,18 @@
+services:
+
+  lobe-chat:
+    image: lobehub/lobe-chat
+    container_name: lobe-chat
+    restart: always
+    ports:
+      - '3210:3210'
+    environment:
+      OPENAI_API_KEY: gptyyds
+      OPENAI_PROXY_URL: http://freegpt35:3040/v1
+      ACCESS_CODE: HelloGPT
+
+  freegpt35:
+    image: missuo/freegpt35:latest
+    restart: always
+    ports:
+      - "3040:3040"
