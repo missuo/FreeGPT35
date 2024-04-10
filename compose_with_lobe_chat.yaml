@@ -10,6 +10,8 @@ services:
       OPENAI_API_KEY: gptyyds
       OPENAI_PROXY_URL: http://freegpt35:3040/v1
       ACCESS_CODE: HelloGPT
+    depends_on:
+      - freegpt35
 
   freegpt35:
     image: missuo/freegpt35:latest
