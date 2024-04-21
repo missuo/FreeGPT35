@@ -368,7 +368,7 @@ app.use((req, res) =>
   res.status(404).send({
     status: false,
     error: {
-      message: `The requested endpoint (${req.method.toLocaleUpperCase()} ${req.path}) was not found. please make sure what are you doing now.`,
+      message: `The requested endpoint (${req.method.toLocaleUpperCase()} ${req.path}) was not found. https://github.com/missuo/FreeGPT35`,
       type: "invalid_request_error",
     },
   })

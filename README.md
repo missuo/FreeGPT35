@@ -4,10 +4,6 @@
 
 Utilize the unlimited free **GPT-3.5-Turbo** API service provided by the login-free ChatGPT Web.
 
-
-> [!IMPORTANT]  
-> **It seems that OpenAI's risk management has tightened, and this project may no longer be viable.**
-
 ## Please READ the following content carefully!
 - Please do not use the IP provided by proxy providers, otherwise you probably won't be able to use it. 请不要使用机场的 IP，不然你大概率无法使用。
 - Do not make frequent requests, such as using **immersive translate**. 不要频繁请求，例如使用沉浸式翻译。
@@ -37,7 +33,7 @@ docker run -p 3040:3040 missuo/freegpt35
 
 ```bash
 mkdir freegpt35 && cd freegpt35
-wget -O compose.yaml https://raw.githubusercontent.com/missuo/FreeGPT35/main/compose.yaml
+wget -O compose.yaml https://raw.githubusercontent.com/missuo/FreeGPT35/main/compose/compose.yaml
 docker compose up -d
 ```
 
@@ -45,7 +41,7 @@ docker compose up -d
 
 ```bash
 mkdir freegpt35 && cd freegpt35
-wget -O compose.yaml https://raw.githubusercontent.com/missuo/FreeGPT35/main/compose_with_next_chat.yaml
+wget -O compose.yaml https://raw.githubusercontent.com/missuo/FreeGPT35/main/compose/compose_with_next_chat.yaml
 docker compose up -d
 ```
 
@@ -55,7 +51,7 @@ After deployment, you can directly access `http://[IP]:3040/v1/chat/completions`
 
 ```bash
 mkdir freegpt35 && cd freegpt35
-wget -O compose.yaml https://raw.githubusercontent.com/missuo/FreeGPT35/main/compose_with_lobe_chat.yaml
+wget -O compose.yaml https://raw.githubusercontent.com/missuo/FreeGPT35/main/compose/compose_with_lobe_chat.yaml
 docker compose up -d
 ```
 
