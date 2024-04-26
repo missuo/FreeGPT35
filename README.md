@@ -4,11 +4,9 @@
 
 Utilize the unlimited free **GPT-3.5-Turbo** API service provided by the login-free ChatGPT Web.
 
-## Please READ the following content carefully!
-- Please do not use the IP provided by proxy providers, otherwise you probably won't be able to use it. 请不要使用机场的 IP，不然你大概率无法使用。
-- Do not make frequent requests, such as using **immersive translate**. 不要频繁请求，例如使用沉浸式翻译。
-- Recommended to use US home broadband IP, you are very likely to succeed. 推荐使用美国家宽IP，你很大可能可以成功。
-- Don't share and abuse your API. 不要共享和滥用你的 API。
+**Due to the frequent updates of OpenAI, I have once again created a new version, which is based on DuckDuckGo, and is `GPT-3.5-Turbo-0125`.** 
+
+Repo: [https://github.com/missuo/FreeDuckDuckGo](https://github.com/missuo/FreeDuckDuckGo)
 
 ## Deploy
 ### Node
